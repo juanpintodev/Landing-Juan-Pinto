@@ -1,0 +1,219 @@
+.bg-header{
+    background: #02557d;
+}
+
+.bg-buttons{
+    background: #ffb749;
+    color: white;
+    border: 2px solid white !important;
+    transition: all 0.3s ease;
+}
+.bg-buttons:hover{
+    background: white;
+    border: 2px solid #ffb749 !important;
+    color: #ffb749 !important;
+}
+
+.margin-hero{
+    margin-top: 30%;
+}
+
+ /* Variables de color */
+ :root {
+    --primary-color: #02557d;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --info-color: #17a2b8;
+    --warning-color: #ffb749;
+    --danger-color: #dc3545;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --gray: #efefef;
+}
+
+/* Override de Bootstrap */
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+/* Header scroll effect */
+#header {
+    transition: all 0.3s ease;
+}
+
+#header.scrolled {
+    background-color: var(--primary-color) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#header.scrolled .bg-header {
+    background-color: white !important;
+}
+
+#header.scrolled .bg-header a,
+#header.scrolled .bg-header span {
+    color: var(--primary-color) !important;
+}
+
+#header.scrolled .navbar-nav .nav-link {
+    color: white !important;
+}
+
+#header.scrolled .brand-text {
+    color: white !important;
+}
+
+/* Logo styles */
+.logo {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0) invert(1);
+}
+
+.brand-text {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: lowercase;
+    color: white;
+}
+
+/* Opacidad solo para video */
+.hero-background video {
+    opacity: 0.7;
+}
+
+/* La imagen de fallback sin opacidad */
+.hero-background img {
+    opacity: 1;
+}
+
+/* Registration form */
+.registration-form {
+    background: rgba(255, 255, 255, 1);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+/* Button styles */
+.btn {
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+/* Card styles */
+.card {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Benefits section images */
+.benefits-section img {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+}
+
+/* Botón con outline amarillo */
+.bg-buttons3 {
+    background: transparent !important;
+    border: 2px solid #ffb749 !important;
+    color: #ffb749 !important;
+    transition: all 0.3s ease;
+}
+
+.bg-buttons3:hover{
+    background: #ffb749 !important;
+    color: white !important;
+    border: 2px solid white !important;
+}
+
+
+/* Play button */
+.play-button {
+    width: 80px;
+    height: 80px;
+    font-size: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Reviews background overlay */
+.reviews-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.custom-card {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    background-color: transparent;
+    height: 100%;
+}
+
+.custom-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%); /* Oscurece la imagen */
+    transition: filter 0.3s ease;
+}
+
+.custom-card:hover img {
+    filter: brightness(80%); /* Efecto de brillo al pasar el ratón */
+}
+
+.custom-card-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    background: linear-gradient(transparent, rgba(0,0,0,0.5));
+}
+
+.custom-card-overlay h4 {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.bg-buttons {
+    background-color: #f89d04; /* Color del botón de la imagen */
+    border: none;
+    color: white;
+    padding: 5px 20px;
+}
