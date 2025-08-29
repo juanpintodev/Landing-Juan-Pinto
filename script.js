@@ -19,24 +19,26 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', handleScroll);
     
-    const navLinks = document.querySelectorAll('a[href^="#"]');
+    const navLinks = document.querySelectorAll('a[href^="#"]:not([data-toggle]):not([data-target]):not([data-slide])');
     
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
             const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                const headerHeight = header.offsetHeight;
-                const targetPosition = targetSection.offsetTop - headerHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+            if (!targetId || targetId === '#' || targetId.length < 2) {
+                return;
             }
+            const targetSection = document.querySelector(targetId);
+            if (!targetSection) {
+                return;
+            }
+            e.preventDefault();
+            const headerHeight = header.offsetHeight;
+            const targetPosition = targetSection.offsetTop - headerHeight;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
         });
     });
     
@@ -44,19 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbarCollapse = document.querySelector('.navbar-collapse');
     
     if (navbarToggler && navbarCollapse) {
-        navbarToggler.addEventListener('click', () => {
-            navbarCollapse.classList.navbarToggle('show');
-        });
+
     }
-    else{
-             const navItems = document.querySelectorAll('.navbar-nav .nav-link');
-             navItems.forEach(item => {
-                 item.addEventListener('click', function() {
-                     navbarCollapse.classList.remove('show');
-                 });
-             });
-            
-        }
     
     
     const videoModal = document.getElementById('videoModal');
@@ -82,6 +73,74 @@ document.addEventListener('DOMContentLoaded', function() {
             if (videoElement) {
                 videoElement.pause();
             }
+        });
+    }
+    
+    const reviewsCarousel = document.getElementById('carouselReviewsInline');
+    if (reviewsCarousel) {
+        // Play on click overlay or poster
+        reviewsCarousel.querySelectorAll('.video-wrapper').forEach(wrapper => {
+            const overlay = wrapper.querySelector('.video-play-overlay');
+            const poster = wrapper.querySelector('.video-poster');
+            const video = wrapper.querySelector('video');
+            const icon = wrapper.querySelector('.play-icon');
+
+            const hideOverlay = () => {
+                if (poster) poster.style.display = 'none';
+                if (overlay) overlay.style.display = 'none';
+                wrapper.classList.add('playing');
+            };
+
+            const startPlayback = (e) => {
+                if (e && typeof e.preventDefault === 'function') e.preventDefault();
+                if (e && typeof e.stopPropagation === 'function') e.stopPropagation();
+                hideOverlay();
+                if (video) {
+                    video.controls = true;
+                    video.setAttribute('controls', 'controls');
+                    try { video.play(); } catch (err) {}
+                    try { video.focus(); } catch (err) {}
+                }
+            };
+
+            if (overlay) overlay.addEventListener('click', startPlayback);
+            if (poster) poster.addEventListener('click', startPlayback);
+            if (icon) icon.addEventListener('click', startPlayback);
+            // Como refuerzo, permitir clic en cualquier parte del wrapper si aún no está reproduciendo
+            wrapper.addEventListener('click', (e) => {
+                if (!wrapper.classList.contains('playing')) startPlayback(e);
+            });
+
+            if (video) {
+                video.addEventListener('play', hideOverlay);
+                video.addEventListener('ended', () => {
+                    // Restaurar estado al terminar
+                    wrapper.classList.remove('playing');
+                    if (overlay) overlay.style.display = '';
+                    if (poster) poster.style.display = '';
+                    try { video.pause(); video.currentTime = 0; } catch (err) {}
+                    video.controls = false;
+                    video.removeAttribute('controls');
+                });
+            }
+        });
+
+        // Pause all videos and restore overlays on slide change
+        reviewsCarousel.addEventListener('slide.bs.carousel', function() {
+            const wrappers = reviewsCarousel.querySelectorAll('.video-wrapper');
+            wrappers.forEach(wrapper => {
+                const video = wrapper.querySelector('video');
+                const overlay = wrapper.querySelector('.video-play-overlay');
+                const poster = wrapper.querySelector('.video-poster');
+                if (video) {
+                    try { video.pause(); video.currentTime = 0; } catch (e) {}
+                    video.controls = false;
+                    video.removeAttribute('controls');
+                }
+                if (overlay) overlay.style.display = '';
+                if (poster) poster.style.display = '';
+                wrapper.classList.remove('playing');
+            });
         });
     }
     

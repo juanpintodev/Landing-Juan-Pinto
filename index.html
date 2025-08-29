@@ -108,8 +108,8 @@
         </div>
         
         <div class="container">
-            <div class="row align-items-center min-vh-100">
-                <div class="col-12 col-sm-6 margin-hero">
+            <div class="row align-items-center justif-content-center min-vh-100">
+                <div class="col-12 col-sm-6 margin-hero hero-top">
                     <div class="hero-content text-white">
                         <h1 class="display-4 font-weight-light mb-3">Welcome a the University</h1>
                         <h2 class="h1 font-weight-bold mb-4">We are an online platform to make learning</h2>
@@ -152,8 +152,8 @@
     <!-- The Most Popular Section -->
     <section id="courses" class="py-5 bg-light">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="mb-0">
+            <div class="text-left mb-5">
+                <h2 class="mb-0 d-flex flex-column align-items-start">
                     <small class="text-primary d-block text-uppercase font-weight-normal mb-2">The most popular</small>
                     <span class="text-dark font-weight-bold">know what we offer you</span>
                 </h2>
@@ -207,8 +207,8 @@
     <!-- About Us Section -->
     <section id="about" class="py-5 bg-primary text-white">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="mb-0">
+            <div class="text-left mb-5">
+                <h2 class="mb-0 row justify-content-sm-start flex-column align-items-start">
                     <small class="text-warning d-block text-uppercase font-weight-normal mb-2">About Us</small>
                     <span class="font-weight-bold">Know everything we do for you</span>
                 </h2>
@@ -281,8 +281,8 @@
     <!-- Study Careers Section -->
     <section class="py-5 bg-light">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="mb-0">
+            <div class="text-left mb-5">
+                <h2 class="mb-0 d-flex flex-column align-items-start">
                     <small class="text-primary d-block text-uppercase font-weight-normal mb-2">Study careers</small>
                     <span class="text-dark font-weight-bold">Explore the different careers we offer</span>
                 </h2>
@@ -347,67 +347,83 @@
                 </div>
             </div>
 
-                <div class="container d-none d-lg-flex my-5">
-                    <div class="card-grid">
-                        <div class="row mb-4">
-                            <div class="col-12 col-md-4 mb-4">
-                                <div class="card custom-card">
-                                    <img src="Images/IMAGE  CATEGORY ADMINISTRATION.jpg" alt="Administration" class="card-img-top">
-                                    <div class="custom-card-overlay" style="background: linear-gradient( rgba(0,0,0,0.5)); padding: 10px 15px 0 15px; margin: 0;">
-                                        <h4 class="font-weight-bold">Administration</h4>
-                                        <button class="bg-buttons text-white rounded-pill px-4">Explore</button>
+                <div class="container d-none d-lg-block my-5">
+                    <div class="row">
+                        <!-- Columna izquierda: Administration, Accounting, Architecture -->
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <!-- Administration -->
+                                <div class="col-lg-6 mb-3">
+                                    <div class="card border-0 shadow-sm position-relative overflow-hidden" style="height: 395px;">
+                                        <img src="Images/IMAGE  CATEGORY ADMINISTRATION.jpg" alt="Administration" class="card-img-top h-100" style="object-fit: cover;">
+                                        <div class="position-absolute w-100 h-100 d-flex flex-column justify-content-end" style="background: linear-gradient(transparent, rgba(0,0,0,0.7)); top: 0; left: 0;">
+                                            <div class="p-3 text-white">
+                                                <h4 class="font-weight-bold mb-2">Administration</h4>
+                                                <button class="bg-buttons text-white rounded-pill px-4 py-1">Explore</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                
-                            <div class="col-12 col-md-4 mb-4">
-                                <div class="card custom-card">
-                                    <img src="Images/IMAGE  CATEGORY ACCOUNTING.jpg" alt="Accounting" class="card-img-top">
-                                    <div class="custom-card-overlay" style="background: linear-gradient( rgba(0,0,0,0.5)); padding: 10px 15px 0 15px; margin: 0;">
-                                        <h4 class="font-weight-bold">Accounting</h4>
-                                        <button class="bg-buttons text-white rounded-pill px-4">Explore</button>
+                                
+                                <!-- Accounting -->
+                                <div class="col-lg-6 mb-3">
+                                    <div class="card border-0 shadow-sm position-relative overflow-hidden" style="height: 395px;">
+                                        <img src="Images/IMAGE  CATEGORY ACCOUNTING.jpg" alt="Accounting" class="card-img-top h-100" style="object-fit: cover;">
+                                        <div class="position-absolute w-100 h-100 d-flex flex-column justify-content-end" style="background: linear-gradient(transparent, rgba(0,0,0,0.7)); top: 0; left: 0;">
+                                            <div class="p-3 text-white">
+                                                <h4 class="font-weight-bold mb-2">Accounting</h4>
+                                                <button class="bg-buttons text-white rounded-pill px-4 py-1">Explore</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                
-                            <div class="col-12 col-md-4 mb-4">
-                                <div class="card custom-card">
-                                    <img src="Images/IMAGE  CATEGORY MATHEMATICS.jpg" alt="Mathematics" class="card-img-top">
-                                    <div class="custom-card-overlay" style="background: linear-gradient( rgba(0,0,0,0.5)); padding: 10px 15px 0 15px; margin: 0;">
-                                        <h4 class="font-weight-bold">Mathematics</h4>
-                                        <button class="bg-buttons text-white rounded-pill px-4">Explore</button>
+                                
+                                <!-- Architecture (ancho completo) -->
+                                <div class="col-lg-12 mb-3">
+                                    <div class="card border-0 shadow-sm position-relative overflow-hidden" style="height: 130px;">
+                                        <img src="Images/IMAGE  CATEGORY ARCHITECTURE.jpg" alt="Architecture" class="card-img-top h-100" style="object-fit: cover;">
+                                        <div class="position-absolute w-100 h-100 d-flex flex-column justify-content-end" style="background: linear-gradient(transparent, rgba(0,0,0,0.7)); top: 0; left: 0;">
+                                            <div class="p-3 text-white">
+                                                <h4 class="font-weight-bold mb-2">Architecture</h4>
+                                                <button class="bg-buttons text-white rounded-pill px-4 py-1">Explore</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                
-                        <div class="row">
-                            <div class="col-12 col-md-4 mb-4">
-                                <div class="card custom-card">
-                                    <img src="Images/IMAGE  CATEGORY PROGRAMMING.jpg" alt="Architecture" class="card-img-top">
-                                    <div class="custom-card-overlay" style="background: linear-gradient( rgba(0,0,0,0.5)); padding: 10px 15px 0 15px; margin: 0;">
-                                        <h4 class="font-weight-bold">Architecture</h4>
-                                        <button class="bg-buttons text-white rounded-pill px-4">Explore</button>
+                        
+                        <!-- Columna derecha: Mathematics, Programming, Biology -->
+                        <div class="col-lg-4">
+                            <!-- Mathematics (más grande) -->
+                            <div class="card border-0 shadow-sm position-relative overflow-hidden mb-3" style="height: 170px;">
+                                <img src="Images/IMAGE  CATEGORY MATHEMATICS.jpg" alt="Mathematics" class="card-img-top h-100" style="object-fit: cover;">
+                                <div class="position-absolute w-100 h-100 d-flex flex-column justify-content-end" style="background: linear-gradient(transparent, rgba(0,0,0,0.7)); top: 0; left: 0;">
+                                    <div class="p-3 text-white">
+                                        <h4 class="font-weight-bold mb-2">Mathematics</h4>
+                                        <button class="bg-buttons text-white rounded-pill px-4 py-1">Explore</button>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="col-12 col-md-4 mb-4">
-                                <div class="card custom-card">
-                                    <img src="Images/IMAGE  CATEGORY ARCHITECTURE.jpg" alt="Biology" class="card-img-top">
-                                    <div class="custom-card-overlay" style="background: linear-gradient( rgba(0,0,0,0.5)); padding: 10px 15px 0 15px; margin: 0;">
-                                        <h4 class="font-weight-bold">Biology</h4>
-                                        <button class="bg-buttons text-white rounded-pill px-4">Explore</button>
+                            <!-- Programming -->
+                            <div class="card border-0 shadow-sm position-relative overflow-hidden mb-3" style="height: 170px;">
+                                <img src="Images/IMAGE  CATEGORY PROGRAMMING.jpg" alt="Programming" class="card-img-top h-100" style="object-fit: cover;">
+                                <div class="position-absolute w-100 h-100 d-flex flex-column justify-content-end" style="background: linear-gradient(transparent, rgba(0,0,0,0.7)); top: 0; left: 0;">
+                                    <div class="p-3 text-white">
+                                        <h4 class="font-weight-bold mb-2">Programming</h4>
+                                        <button class="bg-buttons text-white rounded-pill px-4 py-1">Explore</button>
                                     </div>
                                 </div>
                             </div>
-                
-                            <div class="col-12 col-md-4 mb-4">
-                                <div class="card custom-card">
-                                    <img src="Images/IMAGE  CATEGORY BIOLOGY.jpg" alt="Programming" class="card-img-top">
-                                    <div class="custom-card-overlay" style="background: linear-gradient( rgba(0,0,0,0.5)); padding: 10px 15px 0 15px; margin: 0;">
-                                        <h4 class="font-weight-bold">Programming</h4>
-                                        <button class="bg-buttons text-white rounded-pill px-4">Explore</button>
+                            
+                            <!-- Biology -->
+                            <div class="card border-0 shadow-sm position-relative overflow-hidden" style="height: 170px;">
+                                <img src="Images/IMAGE  CATEGORY BIOLOGY.jpg" alt="Biology" class="card-img-top h-100" style="object-fit: cover;">
+                                <div class="position-absolute w-100 h-100 d-flex flex-column justify-content-end" style="background: linear-gradient(transparent, rgba(0,0,0,0.7)); top: 0; left: 0;">
+                                    <div class="p-3 text-white">
+                                        <h4 class="font-weight-bold mb-2">Biology</h4>
+                                        <button class="bg-buttons text-white rounded-pill px-4 py-1">Explore</button>
                                     </div>
                                 </div>
                             </div>
@@ -424,8 +440,8 @@
     <!-- Team Section -->
     <section id="team" class="py-5">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="mb-0">
+            <div class="text-left mb-5">
+                <h2 class="mb-0 d-flex flex-column align-items-start">
                     <small class="text-primary d-block text-uppercase font-weight-normal mb-2">Our Team</small>
                     <span class="text-dark font-weight-bold">Meet the best professionals</span>
                 </h2>
@@ -595,53 +611,71 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="text-center">
-                        <a id="video-testimonial-trigger" href="#" data-toggle="modal" data-target="#videoModal" style="display: inline-block; position: relative; max-width: 400px;">
-                            <img src="Images/IMAGE TESTIMONIALS ESTUDENT.jpg" alt="Video Preview" class="img-fluid rounded shadow" style="cursor: pointer; max-width: 400px;">
-                            <div class="position-absolute" style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
-                                <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-                                    <i class="fas fa-play text-white" style="font-size: 24px; margin-left: 4px;"></i>
+                    <div id="carouselReviewsInline" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <ol class="carousel-indicators">
+                          <li data-target="#carouselReviewsInline" data-slide-to="0" class="active"></li>
+                          <li data-target="#carouselReviewsInline" data-slide-to="1"></li>
+                          <li data-target="#carouselReviewsInline" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <div class="position-relative embed-responsive embed-responsive-16by9 video-wrapper">
+                                <img src="Images/person_1.jpg" alt="Preview 1" class="video-poster img-fluid embed-responsive-item" style="object-fit: cover;">
+                                <div class="video-play-overlay d-flex align-items-center justify-content-center">
+                                    <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center play-icon">
+                                        <i class="fas fa-play text-white"></i>
+                                    </div>
                                 </div>
+                                <video class="embed-responsive-item" preload="metadata">
+                                    <source src="Videos/review-1.mp4#t=0.1" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
                             </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="position-relative embed-responsive embed-responsive-16by9 video-wrapper">
+                                <img src="Images/person_2.jpg" alt="Preview 2" class="video-poster img-fluid embed-responsive-item" style="object-fit: cover;">
+                                <div class="video-play-overlay d-flex align-items-center justify-content-center">
+                                    <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center play-icon">
+                                        <i class="fas fa-play text-white"></i>
+                                    </div>
+                                </div>
+                                <video class="embed-responsive-item" preload="metadata">
+                                    <source src="Videos/review-1.mp4#t=0.1" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="position-relative embed-responsive embed-responsive-16by9 video-wrapper">
+                                <img src="Images/person_3.jpg" alt="Preview 3" class="video-poster img-fluid embed-responsive-item" style="object-fit: cover;">
+                                <div class="video-play-overlay d-flex align-items-center justify-content-center">
+                                    <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center play-icon">
+                                        <i class="fas fa-play text-white"></i>
+                                    </div>
+                                </div>
+                                <video class="embed-responsive-item" preload="metadata">
+                                    <source src="Videos/review-1.mp4#t=0.1" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                          </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselReviewsInline" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
                         </a>
-                        <div class="bg-white rounded-pill px-4 py-2 d-inline-block mt-3 mb-3">
-                            <h5 class="text-warning font-weight-bold mb-0">JEFF FRESHMAN</h5>
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <span class="bg-warning rounded-circle mx-1" style="width: 12px; height: 12px;"></span>
-                            <span class="bg-warning rounded-circle mx-1" style="width: 12px; height: 12px;"></span>
-                            <span class="bg-white rounded-circle mx-1" style="width: 12px; height: 12px;"></span>
-                            <span class="bg-white rounded-circle mx-1" style="width: 12px; height: 12px;"></span>
-                            <span class="bg-white rounded-circle mx-1" style="width: 12px; height: 12px;"></span>
-                        </div>
+                        <a class="carousel-control-next" href="#carouselReviewsInline" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Video Modal -->
-    <div class="modal fade" id="videoModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Student Testimonial</h5>
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span>&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <video class="embed-responsive-item" controls>
-                            <source src="Videos/review-1.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    
     <!-- Footer -->
     <footer class="bg-primary text-white py-3 justify-content-center">
         <div class="container">
